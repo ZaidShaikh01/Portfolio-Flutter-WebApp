@@ -4,6 +4,7 @@ import 'package:flutter_portfolio/view/splash/splash_view.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
+  setLightTheme();
   runApp(const MyApp());
 }
 
@@ -22,8 +23,8 @@ class MyApp extends StatelessWidget {
                 bodyColor: textColor,
               )
               .copyWith(
-                bodyLarge: const TextStyle(color: bodyTextColor),
-                bodyMedium: const TextStyle(color: bodyTextColor),
+                bodyLarge: TextStyle(color: bodyTextColor),
+                bodyMedium: TextStyle(color: bodyTextColor),
               ),
         ),
         home: SplashView());

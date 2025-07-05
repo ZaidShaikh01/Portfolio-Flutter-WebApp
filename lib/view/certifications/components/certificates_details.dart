@@ -50,8 +50,7 @@ class CertificateStack extends StatelessWidget {
                     ),
                     Text(
                       certificateList[index].date,
-                      style:
-                          const TextStyle(color: bodyTextColor, fontSize: 12),
+                      style: TextStyle(color: bodyTextColor, fontSize: 12),
                     ),
                   ],
                 ),
@@ -62,13 +61,13 @@ class CertificateStack extends StatelessWidget {
                   maxLines: 1,
                   TextSpan(
                       text: 'Skills : ',
-                      style: const TextStyle(
+                      style: TextStyle(
                         color: textColor,
                       ),
                       children: [
                         TextSpan(
                           text: certificateList[index].skills,
-                          style: const TextStyle(
+                          style: TextStyle(
                               color: bodyTextColor,
                               overflow: TextOverflow.ellipsis),
                         )
@@ -90,7 +89,7 @@ class CertificateStack extends StatelessWidget {
                           linearColorOne,
                           linearColorTwo,
                         ]),
-                        boxShadow: const [
+                        boxShadow: [
                           BoxShadow(
                               color: boxShadowOne,
                               offset: Offset(0, -1),
@@ -100,7 +99,7 @@ class CertificateStack extends StatelessWidget {
                               offset: Offset(0, 1),
                               blurRadius: 5),
                         ]),
-                    child: const Row(
+                    child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(

@@ -35,7 +35,7 @@ class ProjectDetail extends StatelessWidget {
               ),
         Text(
           projectList[index].description,
-          style: const TextStyle(color: bodyTextColor, height: 1.5),
+          style: TextStyle(color: bodyTextColor, height: 1.5),
           maxLines: size.width > 700 && size.width < 750
               ? 3
               : size.width < 470

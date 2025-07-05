@@ -14,7 +14,7 @@ class ProjectLinks extends StatelessWidget {
       children: [
         Row(
           children: [
-            const Text('Check on Github',
+            Text('Check on Github',
                 style: TextStyle(color: textColor),
                 overflow: TextOverflow.ellipsis),
             IconButton(

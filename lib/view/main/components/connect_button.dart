@@ -24,7 +24,7 @@ class ConnectButton extends StatelessWidget {
                   linearColorOne,
                   linearColorTwo,
                 ]),
-                boxShadow: const [
+                boxShadow: [
                   BoxShadow(
                       color: boxShadowOne,
                       offset: Offset(0, -1),

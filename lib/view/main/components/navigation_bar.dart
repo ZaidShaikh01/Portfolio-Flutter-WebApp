@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_portfolio/view%20model/responsive.dart';
 import 'package:flutter_portfolio/view/intro/components/side_menu_button.dart';
 import 'package:flutter_portfolio/view/main/components/connect_button.dart';
+import '../../../main.dart';
 import '../../../res/constants.dart';
 import 'navigation_button_list.dart';
 
@@ -37,7 +38,16 @@ class TopNavigationBar extends StatelessWidget {
           const Spacer(
             flex: 1,
           ),
-          IconButton(onPressed: () {}, icon: Icon(Icons.shield_moon_rounded)),
+          IconButton(
+              onPressed: () {
+                if (bgColor == const Color(0xFF000515)) {
+                  setLightTheme();
+                } else {
+                  setDarkTheme();
+                }
+                runApp(MyApp());
+              },
+              icon: Icon(Icons.shield_moon_rounded)),
           const Spacer(),
         ],
       ),

@@ -19,7 +19,7 @@ class DownloadButton extends StatelessWidget {
             vertical: defaultPadding / 1.5, horizontal: defaultPadding * 2),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
-          boxShadow: const [
+          boxShadow: [
             BoxShadow(
                 color: boxShadowOne, offset: Offset(0, -1), blurRadius: 5),
             BoxShadow(color: boxShadowTwo, offset: Offset(0, 1), blurRadius: 5),
@@ -44,7 +44,7 @@ class DownloadButton extends StatelessWidget {
             const SizedBox(
               width: defaultPadding / 3,
             ),
-            const Icon(
+            Icon(
               FontAwesomeIcons.download,
               color: bodyTextColor,
               size: 15,

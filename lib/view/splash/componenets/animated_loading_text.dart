@@ -22,10 +22,10 @@ class AnimatedLoadingText extends StatelessWidget {
             ),
             Text(
               '${(value * 100).toInt()}%',
-              style: const TextStyle(
+              style: TextStyle(
                   color: textColor,
                   fontWeight: FontWeight.bold,
-                  shadows: [
+                  shadows: const [
                     Shadow(
                         color: Colors.pink,
                         blurRadius: 10,
