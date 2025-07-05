@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../../res/constants.dart';
+
 class MyPortfolioText extends StatelessWidget {
   const MyPortfolioText({super.key, required this.start, required this.end});
   final double start;
@@ -13,7 +15,7 @@ class MyPortfolioText extends StatelessWidget {
         builder: (context, value, child) {
           return Text('My Personal Portfolio',
               style: Theme.of(context).textTheme.headlineLarge!.copyWith(
-                  color: Colors.white,
+                  color: textColor,
                   fontWeight: FontWeight.w900,
                   height: 0,
                   fontSize: value));

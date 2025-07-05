@@ -11,6 +11,7 @@ class AnimatedImageContainer extends StatefulWidget {
   @override
   AnimatedImageContainerState createState() => AnimatedImageContainerState();
 }
+
 class AnimatedImageContainerState extends State<AnimatedImageContainer>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
@@ -22,11 +23,13 @@ class AnimatedImageContainerState extends State<AnimatedImageContainer>
       duration: const Duration(milliseconds: 1000),
     )..repeat(reverse: true); // Repeat the animation loop
   }
+
   @override
   void dispose() {
     _controller.dispose();
     super.dispose();
   }
+
   @override
   Widget build(BuildContext context) {
     return AnimatedBuilder(
@@ -42,17 +45,17 @@ class AnimatedImageContainerState extends State<AnimatedImageContainer>
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(30),
               gradient: const LinearGradient(colors: [
-                Colors.pinkAccent,
-                Colors.blue,
+                linearColorOne,
+                linearColorTwo,
               ]),
               boxShadow: const [
                 BoxShadow(
-                  color: Colors.pink,
+                  color: boxShadowOne,
                   offset: Offset(-2, 0),
                   blurRadius: 20,
                 ),
                 BoxShadow(
-                  color: Colors.blue,
+                  color: boxShadowTwo,
                   offset: Offset(2, 0),
                   blurRadius: 20,
                 ),

@@ -31,8 +31,10 @@ class CertificateStack extends StatelessWidget {
               children: [
                 Text(
                   certificateList[index].name,
-                  style: Theme.of(context).textTheme.titleSmall!.copyWith(
-                      color: Colors.white, fontWeight: FontWeight.bold),
+                  style: Theme.of(context)
+                      .textTheme
+                      .titleSmall!
+                      .copyWith(color: textColor, fontWeight: FontWeight.bold),
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                 ),
@@ -48,7 +50,8 @@ class CertificateStack extends StatelessWidget {
                     ),
                     Text(
                       certificateList[index].date,
-                      style: const TextStyle(color: Colors.grey, fontSize: 12),
+                      style:
+                          const TextStyle(color: bodyTextColor, fontSize: 12),
                     ),
                   ],
                 ),
@@ -60,13 +63,13 @@ class CertificateStack extends StatelessWidget {
                   TextSpan(
                       text: 'Skills : ',
                       style: const TextStyle(
-                        color: Colors.white,
+                        color: textColor,
                       ),
                       children: [
                         TextSpan(
                           text: certificateList[index].skills,
                           style: const TextStyle(
-                              color: Colors.grey,
+                              color: bodyTextColor,
                               overflow: TextOverflow.ellipsis),
                         )
                       ]),
@@ -84,16 +87,16 @@ class CertificateStack extends StatelessWidget {
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(30),
                         gradient: LinearGradient(colors: [
-                          Colors.pink,
-                          Colors.blue.shade900,
+                          linearColorOne,
+                          linearColorTwo,
                         ]),
                         boxShadow: const [
                           BoxShadow(
-                              color: Colors.blue,
+                              color: boxShadowOne,
                               offset: Offset(0, -1),
                               blurRadius: 5),
                           BoxShadow(
-                              color: Colors.red,
+                              color: boxShadowTwo,
                               offset: Offset(0, 1),
                               blurRadius: 5),
                         ]),
@@ -102,14 +105,15 @@ class CertificateStack extends StatelessWidget {
                       children: [
                         Text(
                           'Credentials',
-                          style: TextStyle(color: Colors.white, fontSize: 10),
+                          style:
+                              TextStyle(color: buttonTextColor, fontSize: 10),
                         ),
                         SizedBox(
                           width: 5,
                         ),
                         Icon(
                           CupertinoIcons.arrow_turn_up_right,
-                          color: Colors.white,
+                          color: buttonTextColor,
                           size: 10,
                         )
                       ],

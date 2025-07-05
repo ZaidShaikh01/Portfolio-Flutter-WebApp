@@ -15,14 +15,15 @@ class DrawerImage extends StatelessWidget {
           borderRadius: BorderRadius.circular(50),
           gradient: LinearGradient(
             colors: [
-              Colors.pink,
-              Colors.blue.shade900,
+              linearColorOne,
+              linearColorTwo,
             ],
           ),
           boxShadow: const [
-            BoxShadow(color: Colors.pink, blurRadius: 10, offset: Offset(0, 2)),
             BoxShadow(
-                color: Colors.blue, blurRadius: 10, offset: Offset(0, -2)),
+                color: boxShadowOne, blurRadius: 10, offset: Offset(0, 2)),
+            BoxShadow(
+                color: boxShadowTwo, blurRadius: 10, offset: Offset(0, -2)),
           ]),
       child: ClipRRect(
           borderRadius: BorderRadius.circular(50),

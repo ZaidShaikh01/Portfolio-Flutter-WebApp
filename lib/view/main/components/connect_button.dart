@@ -21,16 +21,16 @@ class ConnectButton extends StatelessWidget {
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(defaultPadding),
                 gradient: LinearGradient(colors: [
-                  Colors.pink,
-                  Colors.blue.shade900,
+                  linearColorOne,
+                  linearColorTwo,
                 ]),
                 boxShadow: const [
                   BoxShadow(
-                      color: Colors.blue,
+                      color: boxShadowOne,
                       offset: Offset(0, -1),
                       blurRadius: defaultPadding / 4),
                   BoxShadow(
-                      color: Colors.red,
+                      color: boxShadowTwo,
                       offset: Offset(0, 1),
                       blurRadius: defaultPadding / 4),
                 ]),
@@ -47,7 +47,7 @@ class ConnectButton extends StatelessWidget {
                 Text(
                   'Whatsapp',
                   style: Theme.of(context).textTheme.labelSmall!.copyWith(
-                      color: Colors.white,
+                      color: buttonTextColor,
                       letterSpacing: 1.2,
                       fontWeight: FontWeight.bold),
                 ),

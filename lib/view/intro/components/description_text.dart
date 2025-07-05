@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../res/constants.dart';
 import '../../../view model/responsive.dart';
 
 class AnimatedDescriptionText extends StatelessWidget {
@@ -17,7 +18,8 @@ class AnimatedDescriptionText extends StatelessWidget {
           'I\'m capable of creating excellent mobile apps, handling${Responsive.isLargeMobile(context) ? '\n' : ''}every step from ${!Responsive.isLargeMobile(context) ? '\n' : ''}concept to deployment.',
           maxLines: 2,
           overflow: TextOverflow.ellipsis,
-          style: TextStyle(color: Colors.grey, wordSpacing: 2, fontSize: value),
+          style:
+              TextStyle(color: bodyTextColor, wordSpacing: 2, fontSize: value),
         );
       },
     );

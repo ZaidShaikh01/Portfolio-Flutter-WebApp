@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../../res/constants.dart';
+
 class NavigationTextButton extends StatelessWidget {
   final VoidCallback onTap;
   final String text;
@@ -16,7 +18,7 @@ class NavigationTextButton extends StatelessWidget {
           style: Theme.of(context)
               .textTheme
               .labelMedium!
-              .copyWith(fontWeight: FontWeight.bold, color: Colors.white),
+              .copyWith(fontWeight: FontWeight.bold),
         ));
   }
 }

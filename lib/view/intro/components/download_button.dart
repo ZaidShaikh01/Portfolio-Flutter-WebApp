@@ -20,15 +20,16 @@ class DownloadButton extends StatelessWidget {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           boxShadow: const [
-            BoxShadow(color: Colors.blue, offset: Offset(0, -1), blurRadius: 5),
-            BoxShadow(color: Colors.red, offset: Offset(0, 1), blurRadius: 5),
+            BoxShadow(
+                color: boxShadowOne, offset: Offset(0, -1), blurRadius: 5),
+            BoxShadow(color: boxShadowTwo, offset: Offset(0, 1), blurRadius: 5),
           ],
           gradient: LinearGradient(
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
               colors: [
-                Colors.pink,
-                Colors.blue.shade900,
+                linearColorOne,
+                linearColorTwo,
               ]),
         ),
         child: Row(
@@ -36,7 +37,7 @@ class DownloadButton extends StatelessWidget {
             Text(
               'Download CV',
               style: Theme.of(context).textTheme.labelSmall!.copyWith(
-                  color: Colors.white,
+                  color: buttonTextColor,
                   letterSpacing: 1.2,
                   fontWeight: FontWeight.bold),
             ),
@@ -45,7 +46,7 @@ class DownloadButton extends StatelessWidget {
             ),
             const Icon(
               FontAwesomeIcons.download,
-              color: Colors.white70,
+              color: bodyTextColor,
               size: 15,
             )
           ],
