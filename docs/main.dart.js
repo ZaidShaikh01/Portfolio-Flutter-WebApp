@@ -64999,7 +64999,7 @@ A.DV.prototype={
 M(a){var s=null,r=A.c5(a,!0,t.A).a,q=A.d6(30),p=A.d6(20),o=A.a([r.r,r.w],t.O),n=A.a([new A.c7(0,B.a_,r.x,new A.t(0,-1),5),new A.c7(0,B.a_,r.y,new A.t(0,1),5)],t.V)
 return new A.f1(B.EG,A.nh(!1,q,!0,A.eQ(s,A.ef(A.a([B.FC,B.w5,A.cr("Whatsapp",s,s,A.aj(a).p1.ax.Lj(B.j,B.a6,1.2))],t.p),B.G,B.cg,B.R),B.B,s,s,new A.cK(s,s,s,p,n,new A.ew(B.aR,B.aJ,B.ao,o,s,s),B.a4),s,60,s,s,s,s,150),s,!0,s,s,s,s,s,s,s,s,s,new A.Up(),s,s,s,s),s)}}
 A.Up.prototype={
-$0(){A.j2(A.dN("https://wa.me/8208900954",0,null))},
+$0(){A.j2(A.dN("https://wa.me/918208900954",0,null))},
 $S:0}
 A.CF.prototype={
 M(a){var s=null,r=A.c5(a,!0,t.A).a
