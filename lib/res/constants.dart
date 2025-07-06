@@ -60,10 +60,10 @@ const darkTheme = AppTheme(
   // boxShadowTwo: Color(0x332C5364),
   // buttonTextColor: Colors.white,
   primaryColor: Colors.white,
-  secondaryColor: const Color(0xFF242430), // Cyan accent
-  darkColor: const Color(0xFF191923), // Purple for CTAs
-  bodyTextColor: const Color(0xFFBDBDBD), // Light gray
-  bgColor: const Color(0xFF000515), // True dark background
+  secondaryColor: Color(0xFF242430), // Cyan accent
+  darkColor: Color(0xFF191923), // Purple for CTAs
+  bodyTextColor: Color(0xFFBDBDBD), // Light gray
+  bgColor: Color(0xFF000515), // True dark background
   textColor: Colors.white,
 
   linearColorOne: Colors.pink, // Dark teal

@@ -18,7 +18,7 @@ class AnimatedLoadingText extends StatelessWidget {
           children: [
             LinearProgressIndicator(
               backgroundColor: Colors.black,
-              color: Colors.deepPurpleAccent,
+              color: Colors.pink,
               value: value,
             ),
             const SizedBox(

@@ -8,50 +8,35 @@ class Project {
 
 List<Project> projectList = [
   Project(
-    'Coffee Application',
-    'Presenting "Coffee" - a Flutter UI application that invites you to indulge in a delightful coffee adventure. Immerse yourself in the world of rich aroma and flavor as you browse through an exquisite selection of specialty coffees. With a user-friendly interface, exploring different blends and discovering their unique details becomes a delightful experience.',
+    'Weather Application',
+    'Presenting "Weatherly" — a Flutter-powered weather application that brings forecasts to life with clarity and elegance. Stay informed and prepared as you explore real-time weather updates, temperature trends, and detailed forecasts in a sleek, intuitive interface. Whether you are planning your day or tracking storms, Weatherly makes it effortless to experience the world’s climate — one location at a time.',
     'assets/images/coffee.png',
-    'https://github.com/Hamad-Anwar/Coffe-Shop-Beautifull-UI',
+    'https://github.com/ZaidShaikh01/flutter_learn/tree/main/weather_app',
   ),
   Project(
-    'Car Controller Application UI',
-    'Car Control Dashboard is a user-friendly mobile application built using Flutter and powered by GetX for efficient state management. Enjoy a modern and intuitive design that adapts to various screen sizes, Interact with dynamic car controls, including speed, steering, and temperature. Realistic animations enhance the visual appeal, making it feel like you are controlling a real car!',
+    'TO-DO Application',
+    'Presenting "Taskly" — a Flutter-based to-do application designed to simplify your day and boost your productivity. Whether it\'s managing daily chores or tracking long-term goals, Taskly offers a clean, intuitive interface that helps you stay organized and focused. Add, edit, and complete tasks with ease — turning chaos into clarity, one task at a time.',
     'assets/images/car.png',
     'https://github.com/Hamad-Anwar/Car-Controller-Getx-Flutter',
   ),
   Project(
-      'Neumorphic Clockify',
-      'Neumorphic TimeKit is an open-source project that brings together the elegance of a beautifully designed alarm system, an analog clock with a neumorphic touch, and a feature-rich stopwatch. Whether you\'re looking for a functional alarm tool, a stylish desktop clock, or a precise stopwatch, TimeKit has you covered.',
+      'Plant Disease Detection',
+      'Presenting "Plant Disease Detector" — a Flutter application that empowers users to identify plant diseases using advanced on-device machine learning. Capture or upload leaf images effortlessly through the built-in image picker, and get instant diagnostic feedback powered by tflite_v2. With a smooth and intuitive UI, the app brings the power of TensorFlow Lite and ML Kit directly to your fingertips — helping you keep your plants healthy and thriving.',
       'assets/images/alarm.jpg',
-      'https://github.com/Hamad-Anwar/Neumorphic-Analog-Clockify'),
+      'https://github.com/ZaidShaikh01/Plant-Disease-Detection'),
   Project(
-      'CUI Aider',
-      'CUI AIDER is an extraordinary application that brings together augmented reality (AR), a robust student portal, intuitive class management, and a comprehensive GPA system, providing an all-encompassing solution for students.Using AR technology, CUI AIDER offers an immersive experience, allowing users to explore the complete university campus virtually. Through AR, students can visualize buildings, navigate with interactive directions, and gain a better understanding of their surroundings.',
+      'ShoeCart',
+      'Presenting "ShoeCart" — a modern Flutter UI application that showcases a sleek shoe shopping experience. Explore a curated collection of stylish footwear with an elegant interface, smooth animations, and interactive cart functionality. Designed with aesthetic precision and responsive layouts, ShoeCart offers a seamless and intuitive browsing experience for fashion-forward users.',
       'assets/images/cui.png',
-      'https://github.com/Hamad-Anwar/'),
+      'https://github.com/ZaidShaikh01/flutter_learn/tree/main/shoes_cart'),
   Project(
-      'Flutter Music Streaming Application',
-      'A Flutter music streaming application that allows users to play audio files from local storage. The app features a beautiful neumorphic UI design and provides a smooth user experience for browsing and playing music.',
-      'assets/images/player.png',
-      'https://github.com/Hamad-Anwar/Neumorphic-Music_Player-Flutter'),
-  Project(
-      'Food Recipe App',
-      'This repository contains a Flutter implementation of a Food Recipe app with a captivating introduction section and impressive animations. It also features a signup and signin page with animations, elegantly presented on a bottom sheet.',
+      'Global Chat',
+      'Presenting "Global Chat" — a real-time Flutter chat application that connects users instantly across the globe. Built using Firebase Authentication and Realtime Database, it enables seamless user sign-in and live message exchange in a dynamic chat interface. Whether you\'re chatting with one or many, Global Chat delivers a smooth, secure, and responsive messaging experience — powered entirely by the cloud.',
       'assets/images/recipe.png',
-      'https://github.com/Hamad-Anwar/Food-Recipe-App-Flutter'),
+      'https://github.com/ZaidShaikh01/flutter_learn/tree/main/global_chat_app'),
   Project(
-      'Task Sync Pro',
-      'Welcome to the Beautiful Task Scheduler App repository! This Flutter-based task management application combines elegant design with a robust backend, ensuring a seamless and organized task management experience. From stunning UI to real-time synchronization, this app has you covered.',
+      'FunFact',
+      'Presenting "FunFact" — a lightweight Flutter application that delivers interesting quotes and facts at your fingertips. Powered by the Dio package for efficient API handling, the app fetches fresh content with speed and simplicity. With a clean UI and smooth experience, FunFact offers a fun way to explore bite-sized wisdom, humor, and surprises — one tap at a time.',
       'assets/images/task.png',
-      'https://github.com/Hamad-Anwar/Task-Sync-Pro-Flutter'),
-  Project(
-      'Flutter Chat Application with Firebase',
-      'Welcome to our innovative Flutter chat application! This feature-rich messaging platform allows users to connect and communicate seamlessly through text and images. The app is built using Flutter for the frontend and integrates with Firebase for backend services, including authentication, real-time database, and storage.',
-      'assets/images/chat.png',
-      'https://github.com/Hamad-Anwar/Messenger-App-Backend-Firebase'),
-  Project(
-      'Doctor Appointment Application',
-      'Introducing the extraordinary "Doctor Appointment System" - a state-of-the-art Flutter UI application that redefines healthcare accessibility and efficiency. Seamlessly crafted, this app empowers users to effortlessly select doctors based on categories, engage in smooth messaging, and access detailed profiles.',
-      'assets/images/doctor.png',
-      'https://github.com/Hamad-Anwar/Doctor-Appointment-Application-UI'),
+      'https://github.com/ZaidShaikh01/flutter_learn/tree/main/funfact_app'),
 ];
