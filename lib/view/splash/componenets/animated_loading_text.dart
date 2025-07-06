@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_portfolio/res/constants.dart';
+import 'package:provider/provider.dart';
+
+import '../../../providers/theme_provider.dart';
 
 class AnimatedLoadingText extends StatelessWidget {
   const AnimatedLoadingText({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final theme = Provider.of<ThemeProvider>(context).theme;
     return SizedBox(
       width: defaultPadding * 5,
       child: TweenAnimationBuilder(
@@ -23,7 +27,7 @@ class AnimatedLoadingText extends StatelessWidget {
             Text(
               '${(value * 100).toInt()}%',
               style: TextStyle(
-                  color: textColor,
+                  color: theme.textColor,
                   fontWeight: FontWeight.bold,
                   shadows: const [
                     Shadow(

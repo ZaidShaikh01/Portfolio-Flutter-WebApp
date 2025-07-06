@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:provider/provider.dart';
+import '../../../../providers/theme_provider.dart';
 import '../../../../res/constants.dart';
 
 class KnowledgeText extends StatelessWidget {
@@ -7,6 +9,7 @@ class KnowledgeText extends StatelessWidget {
   final String knowledge;
   @override
   Widget build(BuildContext context) {
+    final theme = Provider.of<ThemeProvider>(context).theme;
     return Padding(
       padding: const EdgeInsets.only(bottom: defaultPadding / 2),
       child: Row(
@@ -17,7 +20,7 @@ class KnowledgeText extends StatelessWidget {
           ),
           Text(
             knowledge,
-            style: TextStyle(color: textColor),
+            style: TextStyle(color: theme.textColor),
           ),
         ],
       ),

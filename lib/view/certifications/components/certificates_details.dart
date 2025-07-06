@@ -1,8 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../../../model/certificate_model.dart';
+import '../../../providers/theme_provider.dart';
 import '../../../res/constants.dart';
 import '../../../view model/getx_controllers/certification_controller.dart';
 
@@ -12,6 +14,7 @@ class CertificateStack extends StatelessWidget {
   final int index;
   @override
   Widget build(BuildContext context) {
+    final theme = Provider.of<ThemeProvider>(context).theme;
     return InkWell(
       onHover: (value) {
         controller.onHover(index, value);
@@ -23,7 +26,7 @@ class CertificateStack extends StatelessWidget {
           height: double.infinity,
           width: double.infinity,
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(30), color: bgColor),
+              borderRadius: BorderRadius.circular(30), color: theme.bgColor),
           duration: const Duration(milliseconds: 500),
           child: SingleChildScrollView(
             child: Column(
@@ -31,10 +34,8 @@ class CertificateStack extends StatelessWidget {
               children: [
                 Text(
                   certificateList[index].name,
-                  style: Theme.of(context)
-                      .textTheme
-                      .titleSmall!
-                      .copyWith(color: textColor, fontWeight: FontWeight.bold),
+                  style: Theme.of(context).textTheme.titleSmall!.copyWith(
+                      color: theme.textColor, fontWeight: FontWeight.bold),
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                 ),
@@ -50,7 +51,8 @@ class CertificateStack extends StatelessWidget {
                     ),
                     Text(
                       certificateList[index].date,
-                      style: TextStyle(color: bodyTextColor, fontSize: 12),
+                      style:
+                          TextStyle(color: theme.bodyTextColor, fontSize: 12),
                     ),
                   ],
                 ),
@@ -62,13 +64,13 @@ class CertificateStack extends StatelessWidget {
                   TextSpan(
                       text: 'Skills : ',
                       style: TextStyle(
-                        color: textColor,
+                        color: theme.textColor,
                       ),
                       children: [
                         TextSpan(
                           text: certificateList[index].skills,
                           style: TextStyle(
-                              color: bodyTextColor,
+                              color: theme.bodyTextColor,
                               overflow: TextOverflow.ellipsis),
                         )
                       ]),
@@ -86,16 +88,16 @@ class CertificateStack extends StatelessWidget {
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(30),
                         gradient: LinearGradient(colors: [
-                          linearColorOne,
-                          linearColorTwo,
+                          theme.linearColorOne,
+                          theme.linearColorTwo,
                         ]),
                         boxShadow: [
                           BoxShadow(
-                              color: boxShadowOne,
+                              color: theme.boxShadowOne,
                               offset: Offset(0, -1),
                               blurRadius: 5),
                           BoxShadow(
-                              color: boxShadowTwo,
+                              color: theme.boxShadowTwo,
                               offset: Offset(0, 1),
                               blurRadius: 5),
                         ]),
@@ -104,15 +106,15 @@ class CertificateStack extends StatelessWidget {
                       children: [
                         Text(
                           'Credentials',
-                          style:
-                              TextStyle(color: buttonTextColor, fontSize: 10),
+                          style: TextStyle(
+                              color: theme.buttonTextColor, fontSize: 10),
                         ),
                         SizedBox(
                           width: 5,
                         ),
                         Icon(
                           CupertinoIcons.arrow_turn_up_right,
-                          color: buttonTextColor,
+                          color: theme.buttonTextColor,
                           size: 10,
                         )
                       ],

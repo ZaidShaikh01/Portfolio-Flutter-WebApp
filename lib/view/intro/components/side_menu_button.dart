@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import '../../../providers/theme_provider.dart';
 import '../../../res/constants.dart';
 
 class MenuButton extends StatelessWidget {
@@ -6,6 +8,7 @@ class MenuButton extends StatelessWidget {
   const MenuButton({super.key, this.onTap});
   @override
   Widget build(BuildContext context) {
+    final theme = Provider.of<ThemeProvider>(context).theme;
     return Column(
       children: [
         const Spacer(),
@@ -24,16 +27,19 @@ class MenuButton extends StatelessWidget {
                     color: Colors.black,
                     boxShadow: [
                       BoxShadow(
-                          color: boxShadowOne, offset: const Offset(1, 1)),
+                          color: theme.boxShadowOne,
+                          offset: const Offset(1, 1)),
                       BoxShadow(
-                          color: boxShadowTwo, offset: const Offset(-1, -1)),
+                          color: theme.boxShadowTwo,
+                          offset: const Offset(-1, -1)),
                     ]),
                 child: Center(
                     child: ShaderMask(
                   shaderCallback: (bounds) {
-                    return LinearGradient(
-                            colors: [linearColorOne, linearColorTwo])
-                        .createShader(bounds);
+                    return LinearGradient(colors: [
+                      theme.linearColorOne,
+                      theme.linearColorTwo
+                    ]).createShader(bounds);
                   },
                   child: Icon(
                     Icons.menu,

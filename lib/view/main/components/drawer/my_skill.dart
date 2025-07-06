@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
+import '../../../../providers/theme_provider.dart';
 import '../../../../res/constants.dart';
 
 class AnimatedLinearProgressIndicator extends StatelessWidget {
@@ -10,6 +12,7 @@ class AnimatedLinearProgressIndicator extends StatelessWidget {
   final String? image;
   @override
   Widget build(BuildContext context) {
+    final theme = Provider.of<ThemeProvider>(context).theme;
     return Padding(
       padding: const EdgeInsets.only(bottom: defaultPadding / 2),
       child: TweenAnimationBuilder(
@@ -31,7 +34,7 @@ class AnimatedLinearProgressIndicator extends StatelessWidget {
                   ),
                   Text(
                     title,
-                    style: TextStyle(color: textColor),
+                    style: TextStyle(color: theme.textColor),
                   ),
                   const Spacer(),
                   Text('${(value * 100).toInt().toString()}%'),
