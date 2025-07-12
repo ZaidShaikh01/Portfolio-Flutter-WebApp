@@ -21,7 +21,7 @@ List<CertificateModel> certificateList = [
     date: 'FEB 2025 - APR 2025',
     skills: 'Data Analysis . SDLC . PowerBI',
     credential:
-        'https://drive.google.com/file/d/1Gm-aEUW36o060od9t6NPxqhDfoMRgRkS/view',
+        'https://drive.google.com/file/d/1oJh-Xr6gK0r6HIIWtkdbtRCOuDRqocL8/view?usp=sharing',
   ),
   CertificateModel(
     name: 'Flutter Internship',
@@ -38,6 +38,14 @@ List<CertificateModel> certificateList = [
     skills: 'Flutter . Dart . Programming',
     credential:
         'https://www.udemy.com/certificate/UC-9a957f7d-c1c4-4cc1-9ca7-fe104b2b157d/',
+  ),
+  CertificateModel(
+    name: 'Flutter Development Course',
+    organization: 'Udemy',
+    date: 'JUL 2025',
+    skills: 'Flutter . Dart . Programming',
+    credential:
+        'https://www.udemy.com/certificate/UC-03651d2e-8baa-4323-8dc4-9dc5a1cada61/',
   ),
   CertificateModel(
     name: 'IR4.O',
