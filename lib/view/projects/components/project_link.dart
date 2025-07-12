@@ -13,6 +13,9 @@ class ProjectLinks extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Provider.of<ThemeProvider>(context).theme;
+    final screenWidth = MediaQuery.of(context).size.width;
+    final isMobile = screenWidth < 400; // tweak threshold as needed
+
     return Row(
       children: [
         Row(
@@ -20,6 +23,10 @@ class ProjectLinks extends StatelessWidget {
             Text('Check on Github',
                 style: TextStyle(color: theme.textColor),
                 overflow: TextOverflow.ellipsis),
+            if (isMobile)
+              const SizedBox(
+                width: 70,
+              ),
             IconButton(
                 onPressed: () {
                   launchUrl(Uri.parse(projectList[index].link));
@@ -27,19 +34,20 @@ class ProjectLinks extends StatelessWidget {
                 icon: SvgPicture.asset('assets/icons/github.svg')),
           ],
         ),
-        const Spacer(),
-        TextButton(
-            onPressed: () {
-              launchUrl(Uri.parse(projectList[index].link));
-            },
-            child: const Text(
-              'Read More>>',
-              overflow: TextOverflow.ellipsis,
-              style: TextStyle(
-                  color: Colors.amber,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 10),
-            ))
+        if (!isMobile) const Spacer(),
+        if (!isMobile)
+          TextButton(
+              onPressed: () {
+                launchUrl(Uri.parse(projectList[index].link));
+              },
+              child: const Text(
+                'Read More>>',
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(
+                    color: Colors.amber,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 10),
+              ))
       ],
     );
   }
