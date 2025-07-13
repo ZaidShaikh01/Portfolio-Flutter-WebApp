@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
+import '../../../../providers/theme_provider.dart';
 import '../../../../res/constants.dart';
 
 class DrawerImage extends StatelessWidget {
@@ -7,6 +9,7 @@ class DrawerImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Provider.of<ThemeProvider>(context).theme;
     return Container(
       height: 100,
       width: 100,
@@ -15,15 +18,19 @@ class DrawerImage extends StatelessWidget {
           borderRadius: BorderRadius.circular(50),
           gradient: LinearGradient(
             colors: [
-              linearColorOne,
-              linearColorTwo,
+              theme.linearColorOne,
+              theme.linearColorTwo,
             ],
           ),
-          boxShadow: const [
+          boxShadow: [
             BoxShadow(
-                color: boxShadowOne, blurRadius: 10, offset: Offset(0, 2)),
+                color: theme.boxShadowOne,
+                blurRadius: 10,
+                offset: const Offset(0, 2)),
             BoxShadow(
-                color: boxShadowTwo, blurRadius: 10, offset: Offset(0, -2)),
+                color: theme.boxShadowTwo,
+                blurRadius: 10,
+                offset: const Offset(0, -2)),
           ]),
       child: ClipRRect(
           borderRadius: BorderRadius.circular(50),

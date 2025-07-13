@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_portfolio/view/intro/components/social_media_coloumn.dart';
+import 'package:provider/provider.dart';
+import '../../../providers/theme_provider.dart';
 import '../../../res/constants.dart';
 
 class SocialMediaIconList extends StatelessWidget {
@@ -7,6 +9,7 @@ class SocialMediaIconList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Provider.of<ThemeProvider>(context).theme;
     final size = MediaQuery.sizeOf(context);
     return TweenAnimationBuilder(
       tween: Tween(begin: 0.0, end: 1.0),
@@ -22,7 +25,7 @@ class SocialMediaIconList extends StatelessWidget {
                 child: Text(
                   'Follow Me',
                   style: Theme.of(context).textTheme.titleSmall!.copyWith(
-                        color: textColor,
+                        color: theme.textColor,
                         fontWeight: FontWeight.w500,
                       ),
                 ),
@@ -33,7 +36,7 @@ class SocialMediaIconList extends StatelessWidget {
                 margin:
                     const EdgeInsets.symmetric(vertical: defaultPadding * 0.5),
                 decoration: BoxDecoration(
-                    color: textColor,
+                    color: theme.textColor,
                     borderRadius: BorderRadius.circular(defaultPadding)),
               ),
               const SocialMediaIconColumn(),

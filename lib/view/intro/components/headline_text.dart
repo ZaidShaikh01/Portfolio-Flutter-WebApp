@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
+import '../../../providers/theme_provider.dart';
 import '../../../res/constants.dart';
 
 class MyPortfolioText extends StatelessWidget {
@@ -8,6 +10,7 @@ class MyPortfolioText extends StatelessWidget {
   final double end;
   @override
   Widget build(BuildContext context) {
+    final theme = Provider.of<ThemeProvider>(context).theme;
     return Builder(builder: (context) {
       return TweenAnimationBuilder(
         tween: Tween(begin: start, end: end),
@@ -15,7 +18,7 @@ class MyPortfolioText extends StatelessWidget {
         builder: (context, value, child) {
           return Text('My Personal Portfolio',
               style: Theme.of(context).textTheme.headlineLarge!.copyWith(
-                  color: textColor,
+                  color: theme.textColor,
                   fontWeight: FontWeight.w900,
                   height: 0,
                   fontSize: value));

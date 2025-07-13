@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
+import '../../../../providers/theme_provider.dart';
 import '../../../../res/constants.dart';
 import 'header_info.dart';
 
@@ -8,7 +10,8 @@ class PersonalInfo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    final theme = Provider.of<ThemeProvider>(context).theme;
+    return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         SizedBox(
@@ -23,7 +26,7 @@ class PersonalInfo extends StatelessWidget {
         ),
         Text(
           'Skills',
-          style: TextStyle(color: textColor),
+          style: TextStyle(color: theme.textColor),
         ),
         SizedBox(
           height: defaultPadding,

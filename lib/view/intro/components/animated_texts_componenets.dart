@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
+import '../../../providers/theme_provider.dart';
 import '../../../res/constants.dart';
 import '../../../view model/responsive.dart';
 
@@ -32,6 +34,7 @@ class AnimatedImageContainerState extends State<AnimatedImageContainer>
 
   @override
   Widget build(BuildContext context) {
+    final theme = Provider.of<ThemeProvider>(context).theme;
     return AnimatedBuilder(
       animation: _controller,
       builder: (context, child) {
@@ -44,18 +47,18 @@ class AnimatedImageContainerState extends State<AnimatedImageContainer>
             padding: const EdgeInsets.all(defaultPadding / 4),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(30),
-              gradient: const LinearGradient(colors: [
-                linearColorOne,
-                linearColorTwo,
+              gradient: LinearGradient(colors: [
+                theme.linearColorOne,
+                theme.linearColorTwo,
               ]),
-              boxShadow: const [
+              boxShadow: [
                 BoxShadow(
-                  color: boxShadowOne,
+                  color: theme.boxShadowOne,
                   offset: Offset(-2, 0),
                   blurRadius: 20,
                 ),
                 BoxShadow(
-                  color: boxShadowTwo,
+                  color: theme.boxShadowTwo,
                   offset: Offset(2, 0),
                   blurRadius: 20,
                 ),

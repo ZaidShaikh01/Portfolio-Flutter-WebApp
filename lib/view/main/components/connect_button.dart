@@ -1,6 +1,8 @@
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
+import '../../../providers/theme_provider.dart';
 import '../../../res/constants.dart';
 
 class ConnectButton extends StatelessWidget {
@@ -8,11 +10,12 @@ class ConnectButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Provider.of<ThemeProvider>(context).theme;
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: defaultPadding),
       child: InkWell(
         onTap: () {
-          launchUrl(Uri.parse('https://wa.me/8208900954'));
+          launchUrl(Uri.parse('https://wa.me/918208900954'));
         },
         borderRadius: BorderRadius.circular(defaultPadding + 10),
         child: Container(
@@ -21,16 +24,16 @@ class ConnectButton extends StatelessWidget {
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(defaultPadding),
                 gradient: LinearGradient(colors: [
-                  linearColorOne,
-                  linearColorTwo,
+                  theme.linearColorOne,
+                  theme.linearColorTwo,
                 ]),
-                boxShadow: const [
+                boxShadow: [
                   BoxShadow(
-                      color: boxShadowOne,
+                      color: theme.boxShadowOne,
                       offset: Offset(0, -1),
                       blurRadius: defaultPadding / 4),
                   BoxShadow(
-                      color: boxShadowTwo,
+                      color: theme.boxShadowTwo,
                       offset: Offset(0, 1),
                       blurRadius: defaultPadding / 4),
                 ]),
@@ -47,7 +50,7 @@ class ConnectButton extends StatelessWidget {
                 Text(
                   'Whatsapp',
                   style: Theme.of(context).textTheme.labelSmall!.copyWith(
-                      color: buttonTextColor,
+                      color: theme.buttonTextColor,
                       letterSpacing: 1.2,
                       fontWeight: FontWeight.bold),
                 ),

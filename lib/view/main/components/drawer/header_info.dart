@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import '../../../../providers/theme_provider.dart';
 import '../../../../res/constants.dart';
 
 class AreaInfoText extends StatelessWidget {
@@ -7,6 +9,7 @@ class AreaInfoText extends StatelessWidget {
   final String text;
   @override
   Widget build(BuildContext context) {
+    final theme = Provider.of<ThemeProvider>(context).theme;
     return Padding(
       padding: const EdgeInsets.only(bottom: defaultPadding / 2),
       child: Row(
@@ -14,7 +17,7 @@ class AreaInfoText extends StatelessWidget {
         children: [
           Text(
             title,
-            style: const TextStyle(color: textColor),
+            style: TextStyle(color: theme.textColor),
           ),
           Text(text),
         ],

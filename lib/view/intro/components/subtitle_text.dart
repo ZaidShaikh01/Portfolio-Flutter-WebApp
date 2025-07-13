@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
+import '../../../providers/theme_provider.dart';
 import '../../../res/constants.dart';
 
 class AnimatedSubtitleText extends StatelessWidget {
@@ -16,6 +18,7 @@ class AnimatedSubtitleText extends StatelessWidget {
   });
   @override
   Widget build(BuildContext context) {
+    final theme = Provider.of<ThemeProvider>(context).theme;
     return TweenAnimationBuilder(
       tween: Tween(begin: start, end: end),
       duration: const Duration(milliseconds: 200),
@@ -23,7 +26,7 @@ class AnimatedSubtitleText extends StatelessWidget {
         return Text(
           text,
           style: Theme.of(context).textTheme.headlineLarge!.copyWith(
-              color: textColor,
+              color: theme.textColor,
               fontWeight: FontWeight.w900,
               shadows: gradient
                   ? [

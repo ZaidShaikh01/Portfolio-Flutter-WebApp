@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_portfolio/view/projects/components/project_link.dart';
+import 'package:provider/provider.dart';
 
 import '../../../model/project_model.dart';
+import '../../../providers/theme_provider.dart';
 import '../../../res/constants.dart';
 import '../../../view model/responsive.dart';
 
@@ -10,6 +12,7 @@ class ProjectDetail extends StatelessWidget {
   const ProjectDetail({super.key, required this.index});
   @override
   Widget build(BuildContext context) {
+    final theme = Provider.of<ThemeProvider>(context).theme;
     var size = MediaQuery.sizeOf(context);
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -21,7 +24,7 @@ class ProjectDetail extends StatelessWidget {
             style: Theme.of(context)
                 .textTheme
                 .headlineSmall!
-                .copyWith(color: textColor, fontWeight: FontWeight.bold),
+                .copyWith(color: theme.textColor, fontWeight: FontWeight.bold),
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
           ),
@@ -35,7 +38,7 @@ class ProjectDetail extends StatelessWidget {
               ),
         Text(
           projectList[index].description,
-          style: const TextStyle(color: bodyTextColor, height: 1.5),
+          style: TextStyle(color: theme.bodyTextColor, height: 1.5),
           maxLines: size.width > 700 && size.width < 750
               ? 3
               : size.width < 470

@@ -1,6 +1,8 @@
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
+import '../../../providers/theme_provider.dart';
 import '../../../res/constants.dart';
 import '../../../view model/responsive.dart';
 
@@ -12,13 +14,14 @@ class TitleText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Provider.of<ThemeProvider>(context).theme;
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
           '$prefix ',
           style: Theme.of(context).textTheme.titleMedium!.copyWith(
-              color: textColor,
+              color: theme.textColor,
               fontSize: !Responsive.isDesktop(context)
                   ? Responsive.isLargeMobile(context)
                       ? 20
@@ -40,7 +43,7 @@ class TitleText extends StatelessWidget {
                 child: Text(
                   title,
                   style: Theme.of(context).textTheme.titleMedium!.copyWith(
-                      color: textColor,
+                      color: theme.textColor,
                       fontSize: !Responsive.isDesktop(context)
                           ? Responsive.isLargeMobile(context)
                               ? 20
@@ -52,7 +55,7 @@ class TitleText extends StatelessWidget {
             : Text(
                 title,
                 style: Theme.of(context).textTheme.titleMedium!.copyWith(
-                    color: textColor,
+                    color: theme.textColor,
                     fontSize: !Responsive.isDesktop(context)
                         ? Responsive.isLargeMobile(context)
                             ? 20
