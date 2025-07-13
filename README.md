@@ -82,4 +82,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 ### Designed and developed with ❤️ by [Zaid Shaikh](https://www.linkedin.com/in/zaidshaikh01/).
-
