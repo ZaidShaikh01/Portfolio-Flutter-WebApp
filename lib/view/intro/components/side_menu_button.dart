@@ -24,7 +24,7 @@ class MenuButton extends StatelessWidget {
                 width: defaultPadding * 2.0 * value,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color: Colors.black,
+                    color: theme.bgColor,
                     boxShadow: [
                       BoxShadow(
                           color: theme.boxShadowOne,
@@ -43,7 +43,7 @@ class MenuButton extends StatelessWidget {
                   },
                   child: Icon(
                     Icons.menu,
-                    color: Colors.white,
+                    color: theme.textColor,
                     size: defaultPadding * 1.2 * value,
                   ),
                 )),

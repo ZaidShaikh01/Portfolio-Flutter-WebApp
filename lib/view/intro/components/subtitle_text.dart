@@ -8,6 +8,7 @@ class AnimatedSubtitleText extends StatelessWidget {
   final double start;
   final double end;
   final String text;
+  final Color color;
   final bool gradient;
   const AnimatedSubtitleText({
     super.key,
@@ -15,6 +16,7 @@ class AnimatedSubtitleText extends StatelessWidget {
     required this.end,
     required this.text,
     this.gradient = false,
+    this.color = Colors.white,
   });
   @override
   Widget build(BuildContext context) {
@@ -26,7 +28,7 @@ class AnimatedSubtitleText extends StatelessWidget {
         return Text(
           text,
           style: Theme.of(context).textTheme.headlineLarge!.copyWith(
-              color: theme.textColor,
+              color: color,
               fontWeight: FontWeight.w900,
               shadows: gradient
                   ? [

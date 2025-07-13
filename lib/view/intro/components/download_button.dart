@@ -52,7 +52,7 @@ class DownloadButton extends StatelessWidget {
             ),
             Icon(
               FontAwesomeIcons.download,
-              color: Colors.white,
+              color: theme.buttonTextColor ?? Colors.black,
               size: 15,
             )
           ],

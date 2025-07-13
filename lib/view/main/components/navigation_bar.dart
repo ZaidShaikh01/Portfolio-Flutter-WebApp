@@ -18,20 +18,27 @@ class TopNavigationBar extends StatelessWidget {
     return Scaffold(
       body: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
+        //mainAxisAlignment: MainAxisAlignment.center,
         children: [
           const Spacer(),
+          // Padding(
+          //   padding: const EdgeInsets.all(defaultPadding),
+          //   child: !Responsive.isLargeMobile(context)
+          //       ? Image.asset(
+          //           'assets/images/triange_icon.png',
+          //           color: theme.textColor,
+          //         )
+          //       : MenuButton(
+          //           onTap: () => Scaffold.of(context).openDrawer(),
+          //         ),
+          // ),
           Padding(
             padding: const EdgeInsets.all(defaultPadding),
-            child: !Responsive.isLargeMobile(context)
-                ? Image.asset(
-                    'assets/images/triange_icon.png',
-                    color: theme.textColor,
-                  )
-                : MenuButton(
-                    onTap: () => Scaffold.of(context).openDrawer(),
-                  ),
+            child: MenuButton(
+              onTap: () => Scaffold.of(context).openDrawer(),
+            ),
           ),
-          // if(Responsive.isLargeMobile(context)) MenuButton(),
+          //if (Responsive.isLargeMobile(context)) MenuButton(),
           const Spacer(
             flex: 2,
           ),
@@ -39,11 +46,16 @@ class TopNavigationBar extends StatelessWidget {
           const Spacer(
             flex: 2,
           ),
-          const ConnectButton(),
-          const Spacer(
-            flex: 1,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              const ConnectButton(),
+              SizedBox(
+                width: defaultPadding,
+              ),
+              const ThemeToggleButton(),
+            ],
           ),
-          ThemeToggleButton(),
           const Spacer(),
         ],
       ),

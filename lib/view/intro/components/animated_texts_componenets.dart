@@ -22,7 +22,7 @@ class AnimatedImageContainerState extends State<AnimatedImageContainer>
     super.initState();
     _controller = AnimationController(
       vsync: this,
-      duration: const Duration(milliseconds: 1000),
+      duration: const Duration(milliseconds: 1500),
     )..repeat(reverse: true); // Repeat the animation loop
   }
 
@@ -40,13 +40,13 @@ class AnimatedImageContainerState extends State<AnimatedImageContainer>
       builder: (context, child) {
         final value = _controller.value;
         return Transform.translate(
-          offset: Offset(0, 2 * value), // Move the container up and down
+          offset: Offset(0, 6 * value), // Move the container up and down
           child: Container(
             height: widget.height!,
             width: widget.width!,
             padding: const EdgeInsets.all(defaultPadding / 4),
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(30),
+              borderRadius: BorderRadius.circular(20),
               gradient: LinearGradient(colors: [
                 theme.linearColorOne,
                 theme.linearColorTwo,
@@ -55,20 +55,20 @@ class AnimatedImageContainerState extends State<AnimatedImageContainer>
                 BoxShadow(
                   color: theme.boxShadowOne,
                   offset: Offset(-2, 0),
-                  blurRadius: 20,
+                  blurRadius: 10,
                 ),
                 BoxShadow(
                   color: theme.boxShadowTwo,
                   offset: Offset(2, 0),
-                  blurRadius: 20,
+                  blurRadius: 10,
                 ),
               ],
             ),
             child: Container(
               alignment: Alignment.center,
               decoration: BoxDecoration(
-                color: Colors.black,
-                borderRadius: BorderRadius.circular(30),
+                color: theme.bgColor,
+                borderRadius: BorderRadius.circular(20),
               ),
               child: Image.asset(
                 'assets/images/image.png',
